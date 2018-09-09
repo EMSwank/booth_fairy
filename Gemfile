@@ -43,6 +43,9 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
+  gem 'faker'
+  gem 'factory_bot'
+  
 end
 
 group :development do
