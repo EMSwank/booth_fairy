@@ -9,18 +9,19 @@ describe "User logs in" do
 
       click_on "Log in"
 
-      expect(current_path).to eq(login_path)
+      expect(current_path).to eq(new_user_session_path)
     end
 
-    it 'creates a new account by clicking on Create Account' do
+    it 'and creates a new account by clicking on Create Account' do
       email = Faker::Internet.email
       password = Faker::Internet.password
 
-      visit login_path
+      visit new_user_session_path
 
-      click_on "Create New Account"
-
-      fill_in "Email address",	with: email
+      click_on "Sign up"
+      expect(current_path).to eq(new_user_registration_path)
+# save_and_open_page
+      fill_in "Email",	with: email
       fill_in "Password", with: password
 
       expect(current_path).to eq(user_dashboard_path)
