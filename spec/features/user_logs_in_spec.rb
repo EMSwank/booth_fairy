@@ -20,12 +20,15 @@ describe "User logs in" do
 
       click_on "Sign up"
       expect(current_path).to eq(new_user_registration_path)
-# save_and_open_page
+
       fill_in "Email",	with: email
       fill_in "Password", with: password
+      fill_in "Password confirmation", with: password
 
-      expect(current_path).to eq(user_dashboard_path)
-      expect(page).to have_content("Check your email to complete registration.")
+      click_on "Sign up"
+
+      expect(current_path).to eq(user_root_path)
+      expect(page).to have_content("Welcome! You have signed up successfully.")
     end
   end
 end
