@@ -43,6 +43,9 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
+  gem 'faker'
+  gem 'factory_bot'
+
 end
 
 group :development do
@@ -57,3 +60,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'materialize-sass', '~> 1.0.0.rc2'
+gem 'omniauth-google-oauth2'
