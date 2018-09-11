@@ -9,7 +9,7 @@ describe "User index" do
 
       expect(page).to have_content(user.email)
       expect(page).to have_content("Today's Weather")
-      expect(page).to have_css(.forecast)
+      expect(page).to have_css(".forecast")
     end
   end
 end
