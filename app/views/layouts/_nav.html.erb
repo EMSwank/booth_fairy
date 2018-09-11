@@ -1,7 +1,13 @@
 <nav role="navigation">
   <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Boothfairy</a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="#">Navbar Link</a></li>
+      <li>
+        <% if user_signed_in? %>
+        <%= link_to  "Log out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+        <%= link_to  "Log in", new_user_session_path %>
+        <% end %>
+      </li>
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
