@@ -1,10 +1,30 @@
 <%= render  partial: '/layouts/nav' %>
 <div class="container">  
-<h1 class="center">Welcome <%= @user.email %></h1>
+  <h1 class="center">Welcome <%= @user.email %></h1>
 
-<div>
-<h3> Current Weather </h3>
-<p> <%= @weather_forecast %> </p>
-</div>
+  <!-- <div class="card">
+    <div class="current-temp">
+      <h3> Current Weather </h3>
+      <h4>Current Temperature </h4>
+      <h4> <%= @current_weather[0] %>&#8457;</h4>
+    </div>
+    <div class="current-conditions">
+      <h5> <%= @current_weather[1] %> </h5>
+    </div> 
+  </div>
+</div> -->
 
+
+
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card right blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Current Weather</span>
+          <h6>Current Temperature </h6>
+          <p> <%= @current_weather[0] %>&#8457;</p>
+          <p><em> <%= @current_weather[1] %> <em></p>
+      </div>
+    </div>
+  </div>
 </div>
