@@ -1,5 +1,10 @@
 <%= render  partial: '/layouts/nav' %>
-<div class="container">
-<h1>Welcome <%= @user.email %></h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container">  
+<h1 class="center">Welcome <%= @user.email %></h1>
+
+<div>
+<h3> Current Weather </h3>
+<p> <%= @weather_forcast %> </p>
+</div>
+
 </div>
