@@ -63,4 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'materialize-sass', '~> 1.0.0.rc2'
 gem 'omniauth-google-oauth2'
-gem 'barometer'
+gem 'faraday'
+gem 'figaro'

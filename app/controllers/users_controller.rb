@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   def index
     @user = current_user
-    weather = WeatherService.new('Denver')
-    @current_weather = [weather.current_temp, weather.condition]
+    @conn = Faraday.new(url: "https://api.darksky.net")
+    response = @conn.get("/forecast/#{ENV[DARK_SKY_API_KEY]}/39.7391428,-104.984696")
+    @weather = JSON.parse(response.body, symbolize_names: true)[:results]
+    
+    binding.pry
+    
   end
 end
