@@ -7,7 +7,9 @@ describe "User logs in" do
 
       expect(page).to have_content("Boothfairy")
 
-      click_on "Log in"
+      within("#login-button") do
+        click_on "Log in"
+      end
 
       expect(current_path).to eq(new_user_session_path)
     end
