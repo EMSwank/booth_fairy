@@ -529,9 +529,20 @@
       "/Users/eliotswank/turing/3module/projects/booth_fairy/app/models/user.rb": [
         1,
         null,
-        null,
         1,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
         null,
         null
       ],
@@ -576,6 +587,11 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         1,
         null,
@@ -588,9 +604,6 @@
         null,
         1,
         1,
-        1,
-        null,
-        1,
         null,
         1,
         1,
@@ -599,6 +612,13 @@
         1,
         1,
         null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         null,
         1,
@@ -707,6 +727,6 @@
         null
       ]
     },
-    "timestamp": 1537245692
+    "timestamp": 1537246825
   }
 }
