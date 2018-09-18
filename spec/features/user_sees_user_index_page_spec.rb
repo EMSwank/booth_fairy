@@ -18,7 +18,7 @@ describe "User index" do
     it "current_temperature" do
 
       visit user_root_path
-save_and_open_page
+
       expect(page).to have_content(@user.email)
       expect(page).to have_content("Current Weather")
       expect(page).to have_css(".forecast")
