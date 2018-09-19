@@ -29,13 +29,3 @@ describe "User creates a market" do
     end
   end
 end
-
-
-
-
-
-# User visits the Market New page
-# They see a form with the market name (drop-down?)
-# as well as a field for address and a submit button.
-# After they fill out the form and click "Create New Market"
-# They're redirected to the market index page.
