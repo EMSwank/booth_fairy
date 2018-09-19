@@ -7,18 +7,15 @@ class MarketsController < ApplicationController
   end
 
   def create
-    @market = Market.create!(market_params)
+    @user = current_user
+    @market = @user.markets.create!(market_params)
     redirect_to markets_path
   end
 
   private
 
   def market_params
-    params.permit(:name, :street_address)
-    params[:market]["user_id"] = user_id
+    params.require(:market).permit(:name, :street_address, :user_id)
   end
 
-  def user_id
-    current_user.id
-  end
 end

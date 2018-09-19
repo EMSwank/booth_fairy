@@ -18,7 +18,6 @@ describe "User creates a market" do
 
     it "and filling out a form" do
       visit new_market_path
-save_and_open_page
 
       fill_in :market_name,	with: "Name-1"
       fill_in :market_street_address, with: "address 1"

@@ -1,6 +1,5 @@
 <%= render partial: '/layouts/nav' %>
 <h1 class="center">Add New Market</h1>
-<%= binding.pry%>
 <%= form_for [:market, @market] do |f| %>
 <%= f.text_field :name, placeholder: "Market Name" %>
 <%= f.text_field :address, placeholder: "Market Address" %>
