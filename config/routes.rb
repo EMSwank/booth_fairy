@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index', as: :user_root # creates user_root_path
 
-  resources :markets, only: [:show, :new, :index, :create]
+  resources :markets, only: [:show, :new, :index, :create] do
+    resources :sales_day, only: [:new, :create]
+  end
+
   namespace :user do
   root 'users#index' # creates user_root_path
 end

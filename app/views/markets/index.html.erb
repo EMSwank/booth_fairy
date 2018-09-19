@@ -1,10 +1,26 @@
-<h1 class="center">Market</h1>
-<div>
-  <table>
-    <% @markets.each do |market| %>
-    <tr class="market-name">
-      <%= link_to  market.name, market_path(market) %>
-    </tr>
-    <% end %>
-  </table>
+<%= render partial: 'layouts/nav' %>
+<div class="container">
+  <h1 class="center">Market</h1>
+  <div>
+  </div>
+
+  <div class="col s6 pull-s3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          Markets
+        </span>
+      </div>
+      <table>
+        <% @markets.each do |market| %>
+        <tr class="market-name">
+          <%= link_to  market.name, market_path(market) %>
+        </tr>
+        <div class="card-action">
+          <%= link_to  "Create New Sales Day", new_market_sales_day_path(market) %>
+        </div>
+        <% end %>
+      </table>
+    </div>
+  </div>
 </div>
