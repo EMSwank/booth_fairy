@@ -47,7 +47,7 @@ describe "User index" do
 
         click_on "Add Market"
 
-        expect(current_path).to eq(new_user_market_path)
+        expect(current_path).to eq(new_market_path)
       end
     end
   end

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index', as: :user_root # creates user_root_path
 
+  resources :markets, only: [:show, :new, :index]
   namespace :user do
-    resources :markets, only: [:show, :new, :index]
   root 'users#index' # creates user_root_path
 end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

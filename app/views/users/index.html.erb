@@ -17,12 +17,12 @@
           <table>
             <% @markets.each do |market| %>
             <tr>
-              <%= link_to  market.name, user_market_path(market) %>
+              <%= link_to  market.name, market_path(market) %>
             </tr>
             <% end %>
           </table>
           <div class="card-action">
-            <%= link_to  "Add Market", new_user_market_path %>
+            <%= link_to  "Add Market", new_market_path %>
           </div>
         </div>
       </div>

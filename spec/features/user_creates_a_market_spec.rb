@@ -17,12 +17,13 @@ describe "User creates a market" do
     end
 
     it "and filling out a form" do
-      visit new_user_market_path
+      visit new_market_path
+save_and_open_page
 
-      fill_in :name,	with: "Name-1"
-      fill_in :street_address, with: "address 1"
+      fill_in :market_name,	with: "Name-1"
+      fill_in :market_street_address, with: "address 1"
 
-      click_on 'Create New Market'
+      click_on 'Create Market'
 
       expect(current_path).to eq(user_markets_path)
       expect(page).to have_content("Name-1")

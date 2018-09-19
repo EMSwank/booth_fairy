@@ -681,7 +681,7 @@
         null,
         1,
         null,
-        0,
+        1,
         null,
         null,
         null,
@@ -821,7 +821,7 @@
         null,
         null
       ],
-      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/user/markets_controller.rb": [
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/markets_controller.rb": [
         1,
         1,
         null,
@@ -837,6 +837,6 @@
         null
       ]
     },
-    "timestamp": 1537372263
+    "timestamp": 1537374045
   }
 }
