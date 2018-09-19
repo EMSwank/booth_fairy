@@ -1,4 +1,4 @@
-class MarketsController < ApplicationController
+class User::MarketsController < ApplicationController
   before_action :authenticate_user!
 
   def new

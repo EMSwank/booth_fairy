@@ -4,7 +4,7 @@ describe "User index" do
 
   context "shows data" do
     before(:each) do
-      @user = create(:user)
+      @user = create(:user, email: "test@test.com")
       visit new_user_session_path
 
       fill_in :user_email,	with: @user.email
@@ -44,10 +44,10 @@ describe "User index" do
     it 'sees a link to create a new market' do
       VCR.use_cassette("features/user_sees_user_index_page") do
         visit user_root_path
-        
+
         click_on "Add Market"
 
-        expect(current_path).to eq(new_market_path)
+        expect(current_path).to eq(new_user_market_path)
       end
     end
   end

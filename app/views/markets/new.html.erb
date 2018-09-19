@@ -1,3 +1,7 @@
 <%= render partial: '/layouts/nav' %>
-<h1>Markets#new</h1>
-<p>Find me in app/views/markets/new.html.erb</p>
+<h1 class="center">Add New Market</h1>
+
+<%= form_for [@market] do |f| %>
+<%= f.text_field :name, placeholder: "Market Name" %>
+<%= f.text_field :address, placeholder: "Market Address" %>
+<% end %>
