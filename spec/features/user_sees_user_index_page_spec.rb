@@ -30,7 +30,7 @@ describe "User index" do
       other_user = create(:user, email: Faker::Internet.email("Test"))
       market_1 = create(:market, user_id: @user.id)
       market_2 = create(:market, user_id: @user.id)
-      market_3 = create(:market, user_id: other_user.id)
+      market_3 = create(:market, name: "test1", user_id: other_user.id)
 
       VCR.use_cassette("features/user_sees_user_index_page") do
         visit user_root_path
@@ -38,6 +38,16 @@ describe "User index" do
         expect(page).to have_content(market_1.name)
         expect(page).to have_content(market_2.name)
         expect(page).to_not have_content(market_3.name)
+      end
+    end
+
+    it 'sees a link to create a new market' do
+      VCR.use_cassette("features/user_sees_user_index_page") do
+        visit user_root_path
+        
+        click_on "Add Market"
+
+        expect(current_path).to eq(new_market_path)
       end
     end
   end

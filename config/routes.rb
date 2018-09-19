@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/users' => 'users#index', as: :user_root # creates user_root_path
-  resources :markets, only: [:show]
+  resources :markets, only: [:show, :new]
 
 namespace :user do
   root 'users#index' # creates user_root_path
