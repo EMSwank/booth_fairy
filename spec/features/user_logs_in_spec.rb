@@ -27,7 +27,9 @@ describe "User logs in" do
       fill_in "Password", with: password
       fill_in "Password confirmation", with: password
 
-      click_on "Sign up"
+      VCR.use_cassette("features/user_logs_in") do
+        click_on "Sign up"
+      end
 
       expect(current_path).to eq(user_root_path)
       expect(page).to have_content("Welcome! You have signed up successfully.")
