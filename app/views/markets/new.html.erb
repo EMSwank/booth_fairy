@@ -1,9 +1,4 @@
 <%= render partial: '/layouts/nav' %>
 <h1 class="center">Add New Market</h1>
 
-<%= form_for [@market] do |f| %>
-<%= f.text_field :name, placeholder: "Market Name" %>
-<%= f.text_field :street_address, placeholder: "Market Address" %>
-<%= hidden_field_tag :user_id, value: @user.id %>
-<%= f.submit %>
-<% end %>
+<%= render partial: 'form' %>

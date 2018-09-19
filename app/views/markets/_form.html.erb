@@ -1,0 +1,7 @@
+<div class="container">
+  <%= form_for [@market] do |f| %>
+  <%= f.text_field :name, placeholder: "Market Name" %>
+  <%= f.text_field :street_address, placeholder: "Market Address" %>
+  <%= f.submit class: "btn" %>
+  <% end %>
+</div>
