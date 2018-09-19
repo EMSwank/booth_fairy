@@ -6,5 +6,6 @@ class UsersController < ApplicationController
     weather = WeatherService.new("39.7391428,-104.984696")
     @weather = weather.parse_weather
     @forecast = weather.forecast
+    @markets = @user.markets
   end
 end
