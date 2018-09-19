@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/users' => 'users#index', as: :user_root # creates user_root_path
+ 
+  resources :markets, only: [:show, :new, :index, :create] do
+    resources :sales_day, only: [:new, :create]
+  end
 
-  resources :markets, only: [:show, :new, :index, :create]
   namespace :user do
   root 'users#index' # creates user_root_path
 end

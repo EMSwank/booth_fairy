@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_041909) do
+ActiveRecord::Schema.define(version: 2018_09_19_193219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2018_09_19_041909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_markets_on_user_id"
+  end
+
+  create_table "sales_days", force: :cascade do |t|
+    t.date "sales_date"
+    t.integer "amount_spent"
+    t.integer "amount_sold"
+    t.bigint "market_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_sales_days_on_market_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,4 +50,5 @@ ActiveRecord::Schema.define(version: 2018_09_19_041909) do
   end
 
   add_foreign_key "markets", "users"
+  add_foreign_key "sales_days", "markets"
 end
