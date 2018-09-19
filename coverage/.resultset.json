@@ -526,6 +526,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -566,6 +567,10 @@
         1,
         null
       ],
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/helpers/markets_helper.rb": [
+        1,
+        null
+      ],
       "/Users/eliotswank/turing/3module/projects/booth_fairy/app/helpers/users_helper.rb": [
         1,
         null
@@ -579,13 +584,33 @@
         1,
         null
       ],
-      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/welcome_controller.rb": [
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/markets_controller.rb": [
         1,
         1,
         null,
         null
       ],
       "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/spec/controllers/welcome_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
@@ -688,10 +713,27 @@
         null,
         1,
         null,
-        0,
+        1,
         null,
         null,
         null,
+        null
+      ],
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/spec/helpers/markets_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
         null
       ],
       "/Users/eliotswank/turing/3module/projects/booth_fairy/spec/helpers/users_helper_spec.rb": [
@@ -741,6 +783,13 @@
         null
       ],
       "/Users/eliotswank/turing/3module/projects/booth_fairy/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/eliotswank/turing/3module/projects/booth_fairy/spec/views/markets/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -799,6 +848,6 @@
         null
       ]
     },
-    "timestamp": 1537337661
+    "timestamp": 1537337753
   }
 }
