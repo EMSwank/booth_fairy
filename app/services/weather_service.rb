@@ -1,22 +1,22 @@
-require 'barometer'
-
 class WeatherService
-  attr_reader :current_temp, :condition
 
-  def initialize(query)
-    @query = query
+  def initialize(coordinates)
+    @coordinates = coordinates
+    @conn = Faraday.new(url: "https://api.darksky.net")
+    @weather = nil
   end
 
-  def get_weather
-    weather = Barometer.new(@query)
-    weather.measure
+  def response
+    @conn.get("/forecast/#{ENV["DARK_SKY_API_KEY"]}/39.7391428,-104.984696")
   end
 
-  def current_temp
-    get_weather.responses.first.current.temperature.f
+  def parse_weather
+    JSON.parse(response.body, symbolize_names: true)
   end
 
-  def condition
-    get_weather.responses.first.current.condition
+  def forecast
+    parse_weather[:daily][:data].map do |day|
+      [Time.at(day[:time]).strftime("%a"), day[:temperatureHigh].round, day[:temperatureLow].round]
+    end
   end
 end

@@ -24,46 +24,68 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">5-Day Forecast</span>
-            <p><%= @weather[:daily][:summary] %></p>
+            <p>
+              <%= @weather[:daily][:summary] %>
+            </p>
           </div>
 
           <table>
             <thead>
               <tr>
-                  <th><%=@forecast[1][0]%></th>
-                  <th><%=@forecast[2][0]%></th>
-                  <th><%=@forecast[3][0]%></th>
-                  <th><%=@forecast[4][0]%></th>
-                  <th><%=@forecast[5][0]%></th>
+                <th>
+                  <%=@forecast[1][0]%>
+                </th>
+                <th>
+                  <%=@forecast[2][0]%>
+                </th>
+                <th>
+                  <%=@forecast[3][0]%>
+                </th>
+                <th>
+                  <%=@forecast[4][0]%>
+                </th>
+                <th>
+                  <%=@forecast[5][0]%>
+                </th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
                 <td>
-                  High: <%= @forecast[1][1] %>
+                  High:
+                  <%= @forecast[1][1] %>
                   <br>
-                  Low: <%= @forecast[1][2] %>
+                  Low:
+                  <%= @forecast[1][2] %>
                 </td>
                 <td>
-                  High: <%= @forecast[2][1] %>
+                  High:
+                  <%= @forecast[2][1] %>
                   <br>
-                  Low: <%= @forecast[2][2] %>
+                  Low:
+                  <%= @forecast[2][2] %>
                 </td>
                 <td>
-                  High: <%= @forecast[3][1] %>
+                  High:
+                  <%= @forecast[3][1] %>
                   <br>
-                  Low: <%= @forecast[3][2] %>
+                  Low:
+                  <%= @forecast[3][2] %>
                 </td>
                 <td>
-                  High: <%= @forecast[4][1] %>
+                  High:
+                  <%= @forecast[4][1] %>
                   <br>
-                  Low: <%= @forecast[4][2] %>
+                  Low:
+                  <%= @forecast[4][2] %>
                 </td>
                 <td>
-                  High: <%= @forecast[5][1] %>
+                  High:
+                  <%= @forecast[5][1] %>
                   <br>
-                  Low: <%= @forecast[5][2] %>
+                  Low:
+                  <%= @forecast[5][2] %>
                 </td>
               </tr>
             </tbody>
