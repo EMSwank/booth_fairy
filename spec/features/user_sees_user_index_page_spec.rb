@@ -25,9 +25,10 @@ describe "User index" do
     end
 
     it 'sees a list of the users markets' do
+      other_user = create(:user, email: Faker::Internet.email("Test"))
       market_1 = create(:market, user_id: @user.id)
       market_2 = create(:market, user_id: @user.id)
-      market_3 = create(:market)
+      market_3 = create(:market, user_id: other_user.id)
 
       visit user_root_path
 
