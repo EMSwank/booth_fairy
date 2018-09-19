@@ -1,7 +1,7 @@
 <%= render partial: '/layouts/nav' %>
 <h1 class="center">Add New Market Day</h1>
 <div class="container">
-  <%= form_for :sales_day do |f| %>
+  <%= form_for [@sales_day] do |f| %>
   <%= f.label :market%>
   <%= f.collection_select(:market, @markets, :id, :name) %>
   <%= f.label :sales_date%>
