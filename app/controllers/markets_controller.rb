@@ -12,6 +12,11 @@ class MarketsController < ApplicationController
     redirect_to markets_path
   end
 
+  def index
+    user = current_user
+    @markets = user.markets.all
+  end
+
   private
 
   def market_params

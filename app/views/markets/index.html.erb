@@ -1,0 +1,10 @@
+<h1 class="center">Market</h1>
+<div>
+  <table>
+    <% @markets.each do |market| %>
+    <tr class="market-name">
+      <%= link_to  market.name, market_path(market) %>
+    </tr>
+    <% end %>
+  </table>
+</div>

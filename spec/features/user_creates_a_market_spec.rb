@@ -24,7 +24,7 @@ describe "User creates a market" do
 
       click_on 'Create Market'
 
-      expect(current_path).to eq(user_markets_path)
+      expect(current_path).to eq(markets_path)
       expect(page).to have_content("Name-1")
     end
   end
